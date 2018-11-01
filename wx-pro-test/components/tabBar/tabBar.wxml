@@ -1,0 +1,10 @@
+<!--components/tabBar/tabBar.wxml-->
+<view class='tarBar'>
+  <view class='{{index == 1 ? "tarBar-container checked" : "tarBar-container"}}' bindtap='toIndex'>
+    <view>left</view>
+  </view>
+  <view class='{{index == 2 ? "tarBar-container checked" : "tarBar-container"}}' bindtap='toUserInfo'>
+    <view>right</view>
+  </view>
+</view>
+

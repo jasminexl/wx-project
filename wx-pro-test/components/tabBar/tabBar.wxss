@@ -1,0 +1,21 @@
+/* components/tabBar/tabBar.wxss */
+.tarBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.tarBar .tarBar-container {
+  width: 50%;
+  height: 150rpx;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarBar .checked {
+  color: #388ef0;
+}

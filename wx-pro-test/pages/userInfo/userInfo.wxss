@@ -1,0 +1,23 @@
+/* pages/userInfo/userInfo.wxss */
+.content {
+  padding: 20rpx;
+  width: 100%;
+}
+.row {
+  background-color: #fff;
+  margin: 0 20rpx 20rpx 20rpx;
+  border: 1rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  height: 130rpx;
+}
+.row-logo {
+  width: 20%;
+  margin: 30rpx;
+}
+.row-span {
+  width: 70%;
+}
+.row-icon {
+  width: 10%;
+}

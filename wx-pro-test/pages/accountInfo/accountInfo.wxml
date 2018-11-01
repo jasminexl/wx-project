@@ -1,0 +1,10 @@
+<!--pages/accountInfo/accountInfo.wxml-->
+<view class='container'>
+  <view class='search-bar'>
+    <view class='search-input'>
+      <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+    </view>
+  </view>
+  <view>账户信息页面</view>
+  <!-- <tabBar index="2"></tabBar> -->
+</view>

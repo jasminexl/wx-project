@@ -1,0 +1,10 @@
+/* pages/accountInfo/accountInfo.wxss */
+.search-bar {
+  width: 100%;
+  margin: 0 auto;
+}
+.search-input {
+  margin: 20rpx auto;
+  background-color: #fff;
+  width: 70%;
+}

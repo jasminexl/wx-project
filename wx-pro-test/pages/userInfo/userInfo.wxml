@@ -1,0 +1,12 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='container'>
+  <view class='content'>
+    <view class='row' bindtap='toAccountInfo'>
+      <view class='row-logo inline-block'>logo</view>
+      <view class='row-span inline-block'>账户信息</view>
+      <view class='row-icon inline-block'>></view>
+    </view>
+  </view>
+  <view>您好，{{userName}}，欢迎来到个人中心</view>
+  <tabBar index="2"></tabBar>
+</view>
