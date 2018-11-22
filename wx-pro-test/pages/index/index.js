@@ -4,6 +4,8 @@ const app = getApp()
 
 Page({
   data: {
+    search: '',
+    seen: true,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -54,6 +56,17 @@ Page({
   toUserInfo: function() {
     wx.navigateTo({
       url: '../userInfo/userInfo',
+    })
+  },
+  bindKeyInput (e) {
+    this.setData({
+      search: e.detail.value
+    })
+  },
+  switchChangeOne (e) {
+    console.log("e.detai.value", e.detail.value)
+    this.setData({
+      seen : !this.data.seen
     })
   }
 })

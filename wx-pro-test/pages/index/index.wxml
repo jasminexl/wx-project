@@ -1,5 +1,15 @@
 <!--index.wxml-->
 <view class="container">
+  <view class='search-bar'>
+    <view class='search-input'>
+      <input type='text' confirm-type='search' placeholder='请输入搜索内容' placeholder-class='input-placeholder' bindinput='bindKeyInput'/>
+    </view>
+  </view>
+  <view>It is {{search}}</view>
+  <view>
+    <view class='inline-block' wx:if="{{seen}}">Can you see me?</view>
+    <switch checked class='inline-block' bindchange='switchChangeOne'></switch>
+  </view>
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>

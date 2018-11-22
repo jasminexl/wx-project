@@ -1,4 +1,28 @@
 /**index.wxss**/
+.search-bar {
+  width: 100%;
+  margin: 0 auto;
+}
+.search-input {
+  height: 55rpx;
+  margin: 20rpx auto;
+  background-color: #fff;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 50rpx;
+}
+.search-input input {
+  padding-left: 25rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  border-radius: 10rpx;
+  color:#777;
+}
+.input-placeholder {
+  font-size: 28rpx;
+  color: #777;
+  text-align: center;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
