@@ -1,0 +1,13 @@
+<!--components/alert/alert.wxml-->
+<view class='alert-bg' wx:if="{{alertOption.isShow}}">
+  <view class='alert-box'>
+    <view class='alert-content'>
+      <view class='alert-text'>{{alertOption.text}}</view>
+      <view class='alert-btn'>
+        <!-- <view class='cancle-btn flex-btn' bindtap='cancleAlert'>取消</view>
+        <view class='sure-btn flex-btn' bindtap='sureAlert'>确认</view> -->
+        <view class='flex-btn' bindtap='sureAlert'>知道了</view>
+      </view>
+    </view>
+  </view>
+</view>
