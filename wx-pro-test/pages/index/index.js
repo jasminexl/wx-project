@@ -9,7 +9,37 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    inputOne: '',
+    inputTwo: '',
+    inputThree: '',
+    checkList: [
+      { value: 'banana', label: '香蕉', checked: 'true'},
+      { value: 'apple', label: '苹果'},
+      { value: 'watermelon', label: '西瓜'},
+      // { value: 'pineapple', label: '菠萝'}
+    ],
+    radioList: [
+      { value: 'banana', label: '香蕉'},
+      { value: 'apple', label: '苹果'},
+      { value: 'watermelon', label: '西瓜'},
+      // { value: 'pineapple', label: '菠萝'}
+    ],
+    checkData: 'banana',
+    radioData: 'banana',
+    sex: 'male',
+    date: '2019-01-01',
+    textarea: ''
+  },
+  sth: 'someThing',
+  updateData (e) {
+    console.log("e", e)
+    console.log("e.detail.keyCode", e.detail.keyCode)
+    console.log("this", this)
+    let tag = e.currentTarget.dataset.tag
+    this.setData({
+      [tag]: e.detail.value
+    })
   },
   //事件处理函数
   bindViewTap: function() {
@@ -67,6 +97,13 @@ Page({
     console.log("e.detai.value", e.detail.value)
     this.setData({
       seen : !this.data.seen
+    })
+  },
+  bindChangeData (e) {
+    console.log("bindChangeData", e)
+    let tag = e.currentTarget.dataset.tag
+    this.setData({
+      [tag] : e.detail.value
     })
   }
 })

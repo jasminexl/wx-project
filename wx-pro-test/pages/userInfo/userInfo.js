@@ -8,8 +8,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userName: ''
+    userName: '',
+    Length: 6,        //输入框个数
+    isFocus: true,    //聚焦
+    Value: "",        //输入的内容
+    ispassword: false, //是否密文显示 true为密文， false为明文。
   },
+
+  Focus(e) {
+    var that = this;
+    console.log(e);
+    var inputValue = e.detail.value;
+    that.setData({
+      Value: inputValue,
+    })
+    console.log("that.data.Value.Length", that.data.Value.length)
+    console.log("that.data.Value.Length", typeof that.data.Value)
+    console.log("that.data.Length", that.data.Length)
+    if (that.data.Value.length == that.data.Length) {
+      console.log("!!!!!!")
+      that.formSubmit(e)
+    }
+  },
+  Tap() {
+    var that = this;
+    that.setData({
+      isFocus: true,
+    })
+  },
+  formSubmit() {
+    var that = this;
+    console.log('yes', that.data.Value);
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

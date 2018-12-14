@@ -40,6 +40,42 @@
   color: #aaa;
 }
 
+.user-form {
+  margin-top: 15rpx;
+  width: 100%;
+}
+
 .usermotto {
-  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+.usermotto .form-view-input {
+  display: block;
+  flex: 1;
+}
+.form-label {
+  width: 180rpx;
+  display: block;
+  text-align: left;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 50rpx;
+}
+.form-input {
+  padding-left: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.form-placeholder {
+  font-size: 40rpx;
+  text-align: left;
+}
+.form-view-textarea {
+  padding: 20rpx 30rpx;
+}
+.form-textarea {
+  max-height: 150rpx;
 }

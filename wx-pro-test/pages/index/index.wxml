@@ -6,19 +6,68 @@
     </view>
   </view>
   <view>It is {{search}}</view>
-  <view>
+  <!-- <view>
     <view class='inline-block' wx:if="{{seen}}">Can you see me?</view>
     <switch checked class='inline-block' bindchange='switchChangeOne'></switch>
-  </view>
+  </view> -->
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname" bindtap='toUserInfo'>{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class='user-form'>
   <view class="usermotto">
-    <text class="user-motto" bindtap='toUserInfo'>{{motto}}</text>
+    <view class='form-view-label'>
+      <text class='form-label'>表单1</text>
+    </view>
+    <view class='form-view-input'>
+      <input class='form-input' placeholder-class='form-placeholder' type='text' value='{{inputOne}}' placeholder='请输入' bindinput='bindChangeData' data-tag='inputOne'></input>
+    </view>
   </view>
+  <view class="usermotto">
+    <view class='form-view-label'>
+      <text class='form-label'>表单1</text>
+    </view>
+    <view class='form-view-input'>
+      <checkbox-group bindchange="bindChangeData" data-tag="checkData">
+        <label class="checkbox" wx:for="{{checkList}}" wx:key="{{item.value}}">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.label}}
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="usermotto">
+    <view class='form-view-label'>
+      <text class='form-label'>表单1</text>
+    </view>
+    <view class='form-view-input'>
+      <radio-group bindchange="bindChangeData" data-tag="radioData">
+        <label class='radio' wx:for='{{radioList}}'>
+          <radio value='{{item.value}}' checked='{{item.value==radioData}}'></radio>{{item.label}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='usermotto'>
+    <view class='form-view-label'>
+      <text class='form-label'>表单1</text>
+    </view>
+    <view class='form-view-input'>
+      <picker mode="date" value='{{date}}' data-tag="date" bindchange='bindChangeData'>
+        <view class='picker'>{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='usermotto'>
+    <view class='form-view-textarea'>
+      <textarea class="form-textarea" placeholder="请输入文本" value='{{textarea}}' bindinput='bindChangeData' data-tag='textarea'/>
+    </view>
+  </view>
+  </view>
+
+  <!-- <input class='form-input' type='text' value='{{inputTwo}}' placeholder='please type' bindinput='updateData' data-tag='inputTwo'></input>
+    <input class='form-input' type='text' value='{{inputThree}}' placeholder='please type' bindinput='updateData' data-tag='inputThree'></input> -->
   <tabBar index="1"></tabBar>
 </view>

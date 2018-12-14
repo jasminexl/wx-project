@@ -21,3 +21,29 @@
 .row-icon {
   width: 10%;
 }
+.content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200rpx;
+}
+.iptbox{
+  width: 80rpx;
+  height: 80rpx;
+  border-bottom:1px solid #000;
+  /* border-radius: 10rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 8rpx;
+}
+.ipt{
+  width: 0;
+  height: 0;
+}
+.btn-area{
+  width: 80%;
+  background-color: orange;
+  color:white;
+}
